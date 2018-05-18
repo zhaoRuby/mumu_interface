@@ -1,0 +1,544 @@
+<html>
+<head><!--1920*1080-->
+	<title>圓夢繪館實驗－100重疊無動畫</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" >
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+
+<!--confirm-->
+	<link rel="stylesheet" href="./css/confirm/jquery-confirm.min.css">
+	<script src="./js/confirm/jquery-confirm.min.js"></script>
+<!-- Link Swiper's CSS -->
+  	<link rel="stylesheet" href="./css/swiper/swiper.css">
+ 	<link rel="stylesheet" href="./css/swiper/swiper.min.css">
+ 	<link rel="stylesheet" href="./css/swiper_style.css">	
+<!-- swiper js-->
+  	<script src="./js/swiper/swiper.js"></script>
+  	<script src="./js/swiper/swiper.min.js"></script>
+
+</head>
+
+<body>
+	<div class="bar">
+		<div id="logoBar">
+			<a href="./index.html"><img id="logo_home" src="./img/Interface_Logo.png"></a>
+			<div id="bt_info" ><img id="logo" src="./img/Interface_MissionInfo.png"></div>
+		</div>
+	</div>
+	<div id="container" class="container">
+		<div id="div_main1" class="main1">
+				<img id="main01" class="z1" src="./img/Interface_Main01.png">
+				<img id="c1-1" class="z2" src="./img/Interface_02_200.png">
+				<img id="c1-2" class="z2" src="./img/Interface_03_200.png">
+				<img id="c1-3" class="z2" src="./img/Interface_04_200.png">
+				<img id="c1-4" class="z2" src="./img/Interface_05_200.png">
+				<img id="c1-5" class="z2" src="./img/Interface_06_200.png">
+				<img id="c1-6" class="z2" src="./img/Interface_07_200.png">
+		</div>
+		<div id="div_main2" class="main2">
+				<img id="main02" class="z1" src="./img/Interface_Main02.png">
+				<img id="c2-1" class="z2" src="./img/Interface_09_200.png">
+				<img id="c2-2" class="z2" src="./img/Interface_10_200.png">
+				<img id="c2-3" class="z2" src="./img/Interface_11_200.png">
+				<img id="c2-4" class="z2" src="./img/Interface_12_200.png">
+				<img id="c2-5" class="z2" src="./img/Interface_13_200.png">
+				<img id="c2-6" class="z2" src="./img/Interface_14_200.png">
+		</div>
+		<div id="div_main3" class="main3">
+			<img id="main03" class="z1" src="./img/Interface_Main03.png">
+			<img id="c3-1" class="z2" src="./img/Interface_16_200.png">
+			<img id="c3-2" class="z2" src="./img/Interface_17_200.png">
+			<img id="c3-3" class="z2" src="./img/Interface_18_200.png">
+			<img id="c3-4" class="z2" src="./img/Interface_19_200.png">
+			<img id="c3-5" class="z2" src="./img/Interface_20_200.png">
+		</div>
+		<div id="div_main4" class="main4">
+			<img id="main04" class="z1" src="./img/Interface_Main04.png">
+			<img id="c4-1" class="z2" src="./img/Interface_22_200.png">
+			<img id="c4-2" class="z2" src="./img/Interface_23_200.png">
+			<img id="c4-3" class="z2" src="./img/Interface_24_200.png">
+			<img id="c4-4" class="z2" src="./img/Interface_25_200.png">
+		</div>
+	</div>
+	<div id="div_backMain">
+		<img id="bt_backMain" src="./img/Interface_Back.png">
+	</div>
+
+
+<!-- Swiper-->
+		<div id="swiperContainer" class="swiper-container">
+			<div id="swiper-wrapper" class="swiper-wrapper"></div>
+		    <!-- Add Pagination -->
+		    <div class="swiper-pagination"></div>
+		    <!--buttons-->
+		    <div class="swiper-button-next"></div>
+		    <div class="swiper-button-prev"></div>
+		</div>
+		<div id="div_backChildMain">
+			<img id="bt_backChildMain" src="./img/Interface_Back.png">
+		</div>
+<!-- Swiper -->
+
+
+
+</body>
+
+<script>
+
+	$(document).ready(function(){
+
+/*Initial*/
+		var answer="給阿公的一封信";
+
+		$("#swiperContainer").css({"visibility":"hidden"});
+		$("#bt_backChildMain").hide();
+		$("#bt_backMain").hide();
+
+/*mission description*/	
+		$.alert({
+			title: '任務（二）開始',
+			content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。'
+		});		
+		
+	
+		
+
+/*Main01 click event*/
+		$("#main01").click(function(){
+
+			$(".z2").css({"opacity":"1"});
+			$("#bt_backMain").show();
+			// 其他大圓消失
+			for(var i=2;i<=4;i++){
+				$("#div_main"+i).css({"visibility":"hidden"});
+			}
+			$("#c1-1").css({
+				"margin-top":"-170px",
+				"margin-left":"80px",
+				"width":"200px"
+			});
+			$("#c1-2").css({
+				"margin-top":"-170px",
+				"margin-left":"640px",
+				"width":"200px"
+			});
+			$("#c1-3").css({
+				"margin-top":"-170px",
+				"margin-left":"1200px",
+				"width":"200px"
+			});
+			$("#c1-4").css({
+				"margin-top":"220px",
+				"margin-left":"80px",
+				"width":"200px"
+			});
+			$("#c1-5").css({
+				"margin-top":"220px",
+				"margin-left":"640px",
+				"width":"200px"
+			});
+			$("#c1-6").css({
+				"margin-top":"220px",
+				"margin-left":"1200px",
+				"width":"200px"
+			});
+
+			$("#main01").css({
+				"width":"70px",
+				"margin-left": "0px",
+				"margin-top": "406px"
+			});
+
+			$("#main01").hide();
+			$("#div_backMain").fadeIn();
+
+/*c1-1 click*/
+			$("#c1-1").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "./php/db.php",
+	                        data : { 
+	                          //  bookMain : '小說',                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});			
+
+
+		});
+
+/*Main02 click event*/
+		$("#main02").click(function(){
+			$(".z2").css({"opacity":"1"});
+			$("#bt_backMain").show();
+			// 其他大圓消失
+			for(var i=1;i<=4;i++){
+				if(i!=2){
+					$("#div_main"+i).css({"visibility":"hidden"});
+				}
+			}
+
+			$("#c2-1").css({
+				"width":"200px",
+				"margin-top":"-170px",
+				"margin-left":"-320px"				
+			});
+
+			$("#c2-2").css({
+				"width":"200px",
+				"margin-top":"-170px",
+				"margin-left":"240px"
+			});
+			$("#c2-3").css({
+				"width":"200px",
+				"margin-top":"-170px",
+				"margin-left":"800px"
+			});
+			$("#c2-4").css({
+				"width":"200px",
+				"margin-top":"220px",
+				"margin-left":"-320px"
+			});
+			$("#c2-5").css({
+				"width":"200px",
+				"margin-top":"220px",
+				"margin-left":"240px"
+			});
+			$("#c2-6").css({
+				"width":"200px",
+				"margin-top":"220px",
+				"margin-left":"800px"
+			});
+
+			$("#main02").css({
+				"width":"70px",
+				"margin-left": "-320px",
+				"margin-top": "407px"
+			});			
+
+			$("#main02").hide();
+			$("#div_backMain").fadeIn();
+
+		});
+
+/*Main03 click event*/
+		$("#main03").click(function(){
+			$(".z2").css({"opacity":"1"});
+			$("#bt_backMain").show();
+			// 其他大圓消失
+			for(var i=1;i<=4;i++){
+				if(i!=3){
+					$("#div_main"+i).css({"visibility":"hidden"});	 //隱藏，但保有物件位置
+				}
+			}
+
+			$("#c3-1").css({
+				"width":"200px",
+				"margin-top":"-170px",
+				"margin-left":"-720px"				
+			});
+
+			$("#c3-2").css({
+				"width":"200px",
+				"margin-top":"-170px",
+				"margin-left":"-160px"
+			});
+			$("#c3-3").css({
+				"width":"200px",
+				"margin-top":"-170px",
+				"margin-left":"400px"
+			});
+			$("#c3-4").css({
+				"width":"200px",
+				"margin-top":"220px",
+				"margin-left":"-430px"
+			});
+			$("#c3-5").css({
+				"width":"200px",
+				"margin-top":"220px",
+				"margin-left":"140px"
+			});
+
+			$("#main03").css({
+				"width":"70px",
+				"margin-left": "-640px",
+				"margin-top": "406px"
+			});			
+
+			$("#main03").hide();
+			$("#div_backMain").fadeIn();
+
+		});
+
+/*Main04 click event*/
+		$("#main04").click(function(){
+			
+			$(".z2").css({"opacity":"1"});
+			$("#bt_backMain").show();
+			// 其他大圓消失
+			for(var i=1;i<=4;i++){
+				if(i!=4){
+					$("#div_main"+i).css({"visibility":"hidden"});	 //隱藏，但保有物件位置	
+				}
+			}
+
+			$("#c4-1").css({
+				"width":"200px",
+				"margin-top":"-170px",
+				"margin-left":"-830px"				
+			});
+
+			$("#c4-2").css({
+				"width":"200px",
+				"margin-top":"-170px",
+				"margin-left":"-280px"
+			});
+			$("#c4-3").css({
+				"width":"200px",
+				"margin-top":"220px",
+				"margin-left":"-830px"
+			});
+			$("#c4-4").css({
+				"width":"200px",
+				"margin-top":"220px",
+				"margin-left":"-280px"
+			});
+
+			$("#main04").css({
+				"width":"70px",
+				"margin-left": "-960px",
+				"margin-top": "406px"
+			});			
+
+			$("#main04").hide();
+			$("#div_backMain").fadeIn();
+
+		});
+
+/*bt_info*/
+		$("#bt_info").click(function(){
+			/*mission description*/		
+			$.alert({
+				title: '任務（二）提示',
+				animation: 'scale',
+				content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+				buttons: { "繼續任務": { action: function() {} }}
+			});
+		});
+
+/*div_backMain click*/
+		$("#bt_backMain").click(function(){
+			$(".z2").css({"opacity":"0.5"});
+			$("#bt_backMain").hide();
+
+
+/*remove click event*/
+		for(var i=0;i<=4;i++){
+			for(var j=1;j<=6;j++){
+				if(i==1||i==2){
+					$("#c"+i+"-"+j).off("click");
+				}
+				else if(i==3){
+					$("#c"+i+"-"+j).off("click");
+				}
+				else{
+					$("#c"+i+"-"+j).off("click");				
+				}
+	
+			}
+		}
+
+			
+//還原主題位置
+			for(var i=1;i<=2;i++){
+				for(var j=1;j<=6;j++){
+					switch(j){
+						case 1:
+							$("#c"+i+"-"+j).css({
+								"margin-top":"0px",
+								"margin-left":"25px",
+								"width":"100px"
+							});
+							break;
+						case 2:
+							$("#c"+i+"-"+j).css({
+								"margin-top":"-45px",
+								"margin-left":"110px",
+								"width":"100px"
+							});	
+							break;
+						case 3:
+							$("#c"+i+"-"+j).css({
+								"margin-top":"0px",
+								"margin-left":"200px",
+								"width":"100px"
+							});	
+							break;
+						case 4:
+							$("#c"+i+"-"+j).css({
+								"margin-top":"100px",
+								"margin-left":"25px",
+								"width":"100px"
+							});	
+							break;
+						case 5:
+							$("#c"+i+"-"+j).css({
+								"margin-top":"145px",
+								"margin-left":"110px",
+								"width":"100px"
+							});	
+							break;
+						case 6:
+							$("#c"+i+"-"+j).css({
+								"margin-top":"100px",
+								"margin-left":"200px",
+								"width":"100px"
+							});	
+							break;
+					}
+							
+				}
+			}
+		
+	
+			$("#c3-1").css({
+				"margin-top":"15px",
+				"margin-left":"20px",
+				"width":"100px"
+			});
+			$("#c3-2").css({
+				"margin-top":"-45px",
+				"margin-left":"112px",
+				"width":"100px"
+			});
+			$("#c3-3").css({
+				"margin-top":"15px",
+				"margin-left":"200px",
+				"width":"100px"
+			});
+			$("#c3-4").css({
+				"margin-top":"125px",
+				"margin-left":"50px",
+				"width":"100px"
+			});
+			$("#c3-5").css({
+				"margin-top":"125px",
+				"margin-left":"180px",
+				"width":"100px"
+			});
+
+			$("#c4-1").css({
+				"margin-top":"-20px",
+				"margin-left":"35px",
+				"width":"100px"
+			});
+			$("#c4-2").css({
+				"margin-top":"-20px",
+				"margin-left":"190px",
+				"width":"100px"
+			});
+			$("#c4-3").css({
+				"margin-top":"125px",
+				"margin-left":"35px",
+				"width":"100px"
+			});
+			$("#c4-4").css({
+				"margin-top":"125px",
+				"margin-left":"190px",
+				"width":"100px"
+			});
+
+			for(var i=1;i<=4;i++){
+				$("#main0"+i).css({
+					"margin-top":"0px",
+					"margin-left":"60px",
+					"width":"200px"
+				});				
+			}
+
+			for (var i=1; i <= 4; i++) {
+				$("#main0"+i).show();
+			};
+			
+			for(var i=1;i<=4;i++){
+				$("#div_main"+i).css({"visibility":"visible"});
+			}
+
+		});
+
+		$("#bt_backChildMain").click(function(){
+			swiper.removeAllSlides(); //remove slides
+			// back to child main
+			$("bt_backChildMain").hide();
+
+					$("#container").show();
+					$("#div_backMain").show();					
+				
+			
+		});
+
+
+/*swiper*/
+	    var swiper = new Swiper('.swiper-container', {
+	      slidesPerView: 4,
+	      slidesPerColumn: 2,
+	      grabCursor: true,
+	      spaceBetween: -10,
+	      // button
+	      navigation:{
+	        nextEl: '.swiper-button-next',
+	        prevEl: '.swiper-button-prev',
+	      },
+	      // pagination
+	      pagination: {
+	        el: '.swiper-pagination',
+	        clickable: true,
+	        paginationClickable: true,
+	      },
+	    });
+
+
+
+	});
+
+</script>
+
+</html>
