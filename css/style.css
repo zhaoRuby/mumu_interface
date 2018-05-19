@@ -71,80 +71,82 @@ body{
 
 /* MAIN01 02 POSITION*/
 #c1-1,#c2-1{
-    margin-left: 25px;
-    margin-top: 0px;
+    margin-left: -23px;
+    margin-top: -20px;
 }
 #c1-2,#c2-2{
     margin-left: 110px;
-    margin-top: -45px;
+    margin-top: -100px;
 }
 #c1-3,#c2-3{
-	margin-left: 200px;
-    margin-top: 0px;
+	margin-left: 243px;
+    margin-top: -20px;
 }
 #c1-4,#c2-4{
-    margin-left: 25px;
-    margin-top: 100px;
+    margin-left: -15px;
+    margin-top: 134px;
 }
 #c1-5,#c2-5{
 	margin-left: 110px;
-    margin-top: 145px;
+    margin-top: 200px;
 }
 #c1-6,#c2-6{
-    margin-left: 200px;
-    margin-top: 100px;
+    margin-left: 238px;
+    margin-top: 134px;
 }
 
 /* MAIN03 POSITION */
 
 #c3-1{
-    margin-left: 20px;
-    margin-top: 15px;	
+    margin-left: -28px;
+    margin-top: -7px;	
 }
 #c3-2{
     margin-left: 112px;
-    margin-top: -45px;
+    margin-top: -100px;
 }
 #c3-3{
-	margin-left: 200px;
-    margin-top: 15px;
+	margin-left: 250px;
+    margin-top: -7px;
 }
 #c3-4{
-	margin-left: 50px;
-    margin-top: 125px;
+	margin-left: 18px;
+    margin-top: 170px;
 }
 #c3-5{
-    margin-left: 180px;
-    margin-top: 125px;
+    margin-left: 205px;
+    margin-top: 170px;
 }
 
 /*MAIN 04 POSITION*/
 #c4-1{
-    margin-left: 35px;
-    margin-top: -20px;
+    margin-left: -1px;
+    margin-top: -50px;
 }
 #c4-2{
-	margin-left: 190px;
-    margin-top: -20px;
+	margin-left: 220px;
+    margin-top: -53px;
 }
 #c4-3{
-	margin-left: 35px;
-    margin-top: 125px;
+	margin-left: 5px;
+    margin-top: 160px;
 }
 #c4-4{    
-	margin-left: 190px;
-    margin-top: 125px;
+	margin-left: 221px;
+    margin-top: 153px;
 }
 
 #bt_backMain{
-	margin-left: 110px;
-    margin-top: 500px;
+    margin-left: 80px;
+    margin-top: 511px;
     cursor: pointer;
 }
 
 #bt_backChildMain{
-	width:70px;
-	margin-left: 20px;
+	position: absolute;
+	z-index: 99;
+	margin-top: -60px;
+	margin-left: 80px;
 	cursor: pointer;
 }
 

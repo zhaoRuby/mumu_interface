@@ -1,18 +1,18 @@
 <html>
 <head><!--1920*1080-->
-	<title>圓夢繪館實驗－100重疊有動畫</title>
+	<title>圓夢繪館實驗－100相切有動畫</title>
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="./css/style.css">
 
 <!--confirm-->
-	<link rel="stylesheet" href="./css/confirm/jquery-confirm.min.css">
+	<link rel="stylesheet" href="../css/confirm/jquery-confirm.min.css">
 	<script src="./js/confirm/jquery-confirm.min.js"></script>
 <!-- Link Swiper's CSS -->
-  	<link rel="stylesheet" href="./css/swiper/swiper.css">
- 	<link rel="stylesheet" href="./css/swiper/swiper.min.css">
- 	<link rel="stylesheet" href="./css/swiper_style.css">	
+  	<link rel="stylesheet" href="../css/swiper/swiper.css">
+ 	<link rel="stylesheet" href="../css/swiper/swiper.min.css">
+ 	<link rel="stylesheet" href="../css/swiper_style.css">	
 <!-- swiper js-->
   	<script src="./js/swiper/swiper.js"></script>
   	<script src="./js/swiper/swiper.min.js"></script>
@@ -89,7 +89,7 @@
 	$(document).ready(function(){
 
 /*Initial*/
-		var answer="給阿公的一封信";
+		var answer="咦──怎麼有個舊皮箱？"; // mission answer
 
 		$("#swiperContainer").css({"visibility":"hidden"});
 		$("#bt_backChildMain").hide();
@@ -97,12 +97,12 @@
 
 /*mission description*/	
 		$.alert({
-			title: '任務（二）開始',
-			content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。'
+			theme: 'my-theme1',
+			title: '任務（三）開始',
+			content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>'
 		});		
 		
 	
-		
 
 /*Main01 click event*/
 		$("#main01").click(function(){
@@ -150,8 +150,9 @@
 				"margin-top": "510px"
 			});
 
-			$("#main01").hide();
+			$("#main01").fadeOut();
 			$("#div_backMain").fadeIn();
+
 /*c1-1 click*/
 			$("#c1-1").on("click",function(){
 	                $.ajax({
@@ -170,20 +171,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -218,20 +220,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -266,20 +269,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -314,20 +318,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -362,20 +367,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -410,20 +416,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -439,7 +446,7 @@
 				$("#bt_info").css({"visibility":"visible"});
 				$("#bt_backChildMain").show();
 
-			});			
+			});					
 
 
 		});
@@ -493,7 +500,7 @@
 				"margin-top": "510px"
 			});			
 
-			$("#main02").hide();
+			$("#main02").fadeOut();
 			$("#div_backMain").fadeIn();
 
 /*c2-1 click*/
@@ -514,20 +521,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -563,20 +571,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -611,20 +620,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -659,20 +669,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -708,20 +719,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -757,20 +769,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -834,7 +847,7 @@
 				"margin-top": "510px"
 			});			
 
-			$("#main03").hide();
+			$("#main03").fadeOut();
 			$("#div_backMain").fadeIn();
 
 /*c3-1 click*/
@@ -855,20 +868,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -904,20 +918,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -952,20 +967,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -1001,20 +1017,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -1049,20 +1066,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -1078,7 +1096,8 @@
 				$("#bt_info").css({"visibility":"visible"});
 				$("#bt_backChildMain").show();
 
-			});
+			});		
+
 
 		});
 
@@ -1122,7 +1141,7 @@
 				"margin-top": "510px"
 			});			
 
-			$("#main04").hide();
+			$("#main04").fadeOut();
 			$("#div_backMain").fadeIn();
 
 /*c4-1 click*/
@@ -1143,20 +1162,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -1192,20 +1212,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -1240,20 +1261,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -1288,20 +1310,21 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
-							    	if($(this).next().text()=="給阿公的一封信")
+							    	if($(this).next().text()==answer)
 							    	{
 										$.alert({
-											title: '任務（二）完成',
+											title: '任務（三）完成',
 											animation: 'scale',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "進入問卷": { action: function() {} }}
 										});
 
 							    	}else{
+
 										$.alert({
 											theme: 'my-theme',
 											title: '點選錯誤',
-											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
 											buttons: { "繼續任務": { action: function() {}}}
 										});	
 							    	}
@@ -1317,19 +1340,21 @@
 				$("#bt_info").css({"visibility":"visible"});
 				$("#bt_backChildMain").show();
 
-			});	
+			});		
 
 		});
+
 
 /*bt_info*/
 		$("#bt_info").click(function(){
 			/*mission description*/		
 			$.alert({
-				title: '任務（二）提示',
+				theme: 'my-theme2',
+				title: '任務（三）提示',
 				animation: 'scale',
-				content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
-				buttons: { "繼續任務": { action: function() {} }}
-			});
+				content: '<h3>請尋找下列這本書：</h3><div style="float:left;"><img width="150px" src="./imageBook/133.jpg"></div><div style="float:left;"><span style="float: left;font-size: 18px;">書名：咦—怎麼有個舊皮箱？</span></div><br><br><div><span>摘要：歐迪與他的貓咪好夥伴樂樂 在<span style="color:red;">家中探險</span>，找到了<span style="color:red;">爺爺的舊皮箱</span>，透過爺爺的舊皮箱，將爺爺那個勇於追夢的冒險精神傳遞給了歐迪，<span style="color:red;">歐迪也繼承了爺爺的冒險精神打算踏上了冒險之路</span>。</span></div>',
+				buttons: { "繼續任務": { action: function() {}}}
+			});	
 		});
 
 /*div_backMain click*/
@@ -1361,44 +1386,44 @@
 					switch(j){
 						case 1:
 							$("#c"+i+"-"+j).css({
-								"margin-top":"-25px",
-								"margin-left":"-10px",
-								"width":"150px"
+								"margin-top":"-20px",
+								"margin-left":"-23px",
+								"width":"100px"
 							});
 							break;
 						case 2:
 							$("#c"+i+"-"+j).css({
-								"margin-top":"-70px",
-								"margin-left":"85px",
-								"width":"150px"
+								"margin-top":"-100px",
+								"margin-left":"110px",
+								"width":"100px"
 							});	
 							break;
 						case 3:
 							$("#c"+i+"-"+j).css({
 								"margin-top":"-20px",
-								"margin-left":"200px",
-								"width":"150px"
+								"margin-left":"243px",
+								"width":"100px"
 							});	
 							break;
 						case 4:
 							$("#c"+i+"-"+j).css({
-								"margin-top":"80px",
-								"margin-left":"-10px",
-								"width":"150px"
+								"margin-top":"134px",
+								"margin-left":"-15px",
+								"width":"100px"
 							});	
 							break;
 						case 5:
 							$("#c"+i+"-"+j).css({
-								"margin-top":"130px",
-								"margin-left":"85px",
-								"width":"150px"
+								"margin-top":"200px",
+								"margin-left":"110px",
+								"width":"100px"
 							});	
 							break;
 						case 6:
 							$("#c"+i+"-"+j).css({
-								"margin-top":"80px",
-								"margin-left":"200px",
-								"width":"150px"
+								"margin-top":"134px",
+								"margin-left":"238px",
+								"width":"100px"
 							});	
 							break;
 					}
@@ -1408,50 +1433,50 @@
 		
 	
 			$("#c3-1").css({
-				"margin-top":"0px",
-				"margin-left":"-20px",
-				"width":"150px"
+				"margin-top":"-7px",
+				"margin-left":"-28px",
+				"width":"100px"
 			});
 			$("#c3-2").css({
-				"margin-top":"-70px",
-				"margin-left":"85px",
-				"width":"150px"
+				"margin-top":"-100px",
+				"margin-left":"112px",
+				"width":"100px"
 			});
 			$("#c3-3").css({
-				"margin-top":"0px",
-				"margin-left":"200px",
-				"width":"150px"
+				"margin-top":"-7px",
+				"margin-left":"250px",
+				"width":"100px"
 			});
 			$("#c3-4").css({
-				"margin-top":"120px",
-				"margin-left":"20px",
-				"width":"150px"
+				"margin-top":"170px",
+				"margin-left":"18px",
+				"width":"100px"
 			});
 			$("#c3-5").css({
-				"margin-top":"120px",
-				"margin-left":"150px",
-				"width":"150px"
+				"margin-top":"170px",
+				"margin-left":"205px",
+				"width":"100px"
 			});
 
 			$("#c4-1").css({
 				"margin-top":"-50px",
-				"margin-left":"-10px",
-				"width":"150px"
+				"margin-left":"-1px",
+				"width":"100px"
 			});
 			$("#c4-2").css({
-				"margin-top":"-50px",
-				"margin-left":"190px",
-				"width":"150px"
+				"margin-top":"-53px",
+				"margin-left":"220px",
+				"width":"100px"
 			});
 			$("#c4-3").css({
-				"margin-top":"120px",
-				"margin-left":"-10px",
-				"width":"150px"
+				"margin-top":"160px",
+				"margin-left":"5px",
+				"width":"100px"
 			});
 			$("#c4-4").css({
-				"margin-top":"120px",
-				"margin-left":"190px",
-				"width":"150px"
+				"margin-top":"153px",
+				"margin-left":"221px",
+				"width":"100px"
 			});
 
 			for(var i=1;i<=4;i++){

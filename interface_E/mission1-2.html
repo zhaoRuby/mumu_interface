@@ -152,14 +152,13 @@
 
 			$("#main01").fadeOut();
 			$("#div_backMain").fadeIn();
-
 /*c1-1 click*/
 			$("#c1-1").on("click",function(){
 	                $.ajax({
 	                        type :"GET",
-	                        url  : "./php/db.php",
+	                        url  : "../php/db.php",
 	                        data : { 
-	                          //  bookMain : '小說',                            
+	                           subtopic : "A1",                            
 	                            },
 	                        dataType: "text",
 	                        success : function(bookInfo) {
@@ -200,7 +199,247 @@
 				$("#bt_info").css({"visibility":"visible"});
 				$("#bt_backChildMain").show();
 
-			});			
+			});	
+/*c1-2 click*/
+			$("#c1-2").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "A2",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+/*c1-3 click*/
+			$("#c1-3").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "A3",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+/*c1-4 click*/
+			$("#c1-4").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "A4",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});	
+/*c1-5 click*/
+			$("#c1-5").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "A5",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});	
+/*c1-6 click*/
+			$("#c1-6").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "A6",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
 
 
 		});
@@ -257,6 +496,298 @@
 			$("#main02").fadeOut();
 			$("#div_backMain").fadeIn();
 
+/*c2-1 click*/
+			$("#c2-1").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "B1",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+
+/*c2-2 click*/
+			$("#c2-2").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "B2",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+/*c2-3 click*/
+			$("#c2-3").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "B3",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+/*c2-4 click*/
+			$("#c2-4").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "B4",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});	
+
+/*c2-5 click*/
+			$("#c2-5").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "B5",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+
+/*c2-6 click*/
+			$("#c2-6").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "B6",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+
 		});
 
 /*Main03 click event*/
@@ -305,6 +836,248 @@
 
 			$("#main03").fadeOut();
 			$("#div_backMain").fadeIn();
+/*c3-1 click*/
+			$("#c3-1").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "C1",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+
+/*c3-2 click*/
+			$("#c3-2").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "C2",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+/*c3-3 click*/
+			$("#c3-3").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "C3",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+
+/*c3-4 click*/
+			$("#c3-4").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "C4",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+/*c3-5 click*/
+			$("#c3-5").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "C5",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
 
 		});
 
@@ -350,6 +1123,200 @@
 
 			$("#main04").fadeOut();
 			$("#div_backMain").fadeIn();
+
+/*c4-1 click*/
+			$("#c4-1").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "D1",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+
+/*c4-2 click*/
+			$("#c4-2").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "D2",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+/*c4-3 click*/
+			$("#c4-3").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "D3",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});		
+/*c4-4 click*/
+			$("#c4-4").on("click",function(){
+	                $.ajax({
+	                        type :"GET",
+	                        url  : "../php/db.php",
+	                        data : { 
+	                           subtopic : "D4",                            
+	                            },
+	                        dataType: "text",
+	                        success : function(bookInfo) {
+	                        	
+	                        	swiper.removeAllSlides();
+
+	                            $("#swiper-wrapper").append(bookInfo);
+
+	                            swiper.update();
+	                            // alert(bookInfo);   
+							    $(".sliderSize").click(function(){
+							    	if($(this).next().text()=="給阿公的一封信")
+							    	{
+										$.alert({
+											title: '任務（二）完成',
+											animation: 'scale',
+											content: '恭喜你完成任務!',
+											buttons: { "下一步": { action: function() {} }}
+										});
+
+							    	}else{
+										$.alert({
+											theme: 'my-theme',
+											title: '點選錯誤',
+											content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。',
+											buttons: { "繼續任務": { action: function() {}}}
+										});	
+							    	}
+							    });	                                             
+	                    	}
+	                    });
+
+
+				$("#container").hide();
+				$("#div_backMain").hide();
+				
+				$("#swiperContainer").css({"visibility":"visible"});
+				$("#bt_info").css({"visibility":"visible"});
+				$("#bt_backChildMain").show();
+
+			});	
 
 		});
 

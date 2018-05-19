@@ -1,6 +1,7 @@
 <?php
 
-	//$bookMain = $_GET['bookMain'];
+
+	$subtopic = $_GET['subtopic'];
 
 	$db_ip = "127.0.0.1";
 	$db_account = "root";
@@ -14,7 +15,7 @@
 
 
 	/*SELECT*/
-	$sql = 'SELECT * FROM `book`  WHERE `bookID` < 270 && `bookID` > 255 ';
+	$sql = 'SELECT * FROM `book`  WHERE `'.$subtopic.'` = 1';
 
 	$result = mysql_query($sql);
 	//$row_result = mysql_fetch_assoc($result);
@@ -30,22 +31,6 @@
 		
 
 	}
-
-	/*
-		    <div id="swiper-wrapper" class="swiper-wrapper">
-		      <div class="swiper-slide">
-		        <img class="sliderSize" src="./imageBook/16.jpg">
-		        <div id="bk1" class="bookName">我的狐狸老師</div>
-		      </div>
-	    	</div>
-		    <!-- Add Pagination -->
-		    <div class="swiper-pagination"></div>
-
-		    <!--buttons-->
-		    <div class="swiper-button-next"></div>
-		    <div class="swiper-button-prev"></div>
-
-	*/
 	
 
 ?>
