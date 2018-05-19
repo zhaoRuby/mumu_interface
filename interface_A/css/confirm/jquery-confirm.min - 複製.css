@@ -641,7 +641,7 @@ body[class*=jconfirm-no-scroll-] {
     -webkit-box-shadow: none;
     box-shadow: 1px 1px black;
     color: white;
-    width:198px;
+    width:195px;
 }
 
 .jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons button.btn-default:hover,
@@ -1160,10 +1160,15 @@ body[class*=jconfirm-no-scroll-] {
 .jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-title-c{
     background-color: #9b9b9b;
 }
+.jconfirm.jconfirm-my-theme .jconfirm-box{
+    background: #f3f3f3;
+    width: 605px;
+}
+
 .jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-buttons button{
     background-color: #ff1313;
     box-shadow: 1px 1px black;
-    width: 198px;
+    width: 195px;
 }
 
 .jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-buttons{
@@ -1174,4 +1179,83 @@ body[class*=jconfirm-no-scroll-] {
 .jconfirm.jconfirm-my-theme .jconfirm-bg{
     background-color: #444;
     opacity: .2;
+}
+.jconfirm.jconfirm-my-theme .jconfirm-box .jconfirm-content-pane .jconfirm-content{
+    height:250px;
+}
+
+
+
+.jconfirm.jconfirm-my-theme1 .jconfirm-box .jconfirm-content-pane .jconfirm-content{
+    height:250px;
+}
+.jconfirm.jconfirm-my-theme1 .jconfirm-box .jconfirm-buttons button{
+    background-color: #10b560;
+    box-shadow: 1px 1px black;
+    width: 195px;
+}
+.jconfirm.jconfirm-my-theme1 .jconfirm-box .jconfirm-buttons{
+    width: 200px;
+    margin: 0px auto;
+}
+.jconfirm.jconfirm-my-theme1 .jconfirm-bg{
+    background-color: #444;
+    opacity: .2;
+}
+.jconfirm.jconfirm-my-theme1 .jconfirm-box{
+    background: #f3f3f3;
+    width: 605px;
+}
+
+
+.jconfirm.jconfirm-my-theme2 .jconfirm-box .jconfirm-title-c{
+    background-color: #11caff;
+}
+.jconfirm.jconfirm-my-theme2 .jconfirm-box .jconfirm-content-pane .jconfirm-content{
+    height:250px;
+}
+.jconfirm.jconfirm-my-theme2 .jconfirm-box .jconfirm-buttons button{
+    background-color: #10b560;
+    box-shadow: 1px 1px black;
+    width: 195px;
+}
+.jconfirm.jconfirm-my-theme2 .jconfirm-box .jconfirm-buttons{
+    width: 200px;
+    margin: 0px auto;
+}
+.jconfirm.jconfirm-my-theme2 .jconfirm-bg{
+    background-color: #444;
+    opacity: .2;
+}
+.jconfirm.jconfirm-my-theme2 .jconfirm-box{
+    background: #f3f3f3;
+    width: 605px;
+}
+
+
+.jconfirm.jconfirm-my-theme3 .jconfirm-box .jconfirm-title-c{
+    background-color: #9b9b9b;
+}
+.jconfirm.jconfirm-my-theme3 .jconfirm-box{
+    background: #f3f3f3;
+    width: 605px;
+}
+
+.jconfirm.jconfirm-my-theme3 .jconfirm-box .jconfirm-buttons button{
+    background-color: #ff1313;
+    box-shadow: 1px 1px black;
+    width: 195px;
+}
+
+.jconfirm.jconfirm-my-theme3 .jconfirm-box .jconfirm-buttons{
+    width: 200px;
+    margin: 0px auto;
+}
+
+.jconfirm.jconfirm-my-theme3 .jconfirm-bg{
+    background-color: #444;
+    opacity: .2;
+}
+.jconfirm.jconfirm-my-theme3 .jconfirm-box .jconfirm-content-pane .jconfirm-content{
+    height:80px;
 }

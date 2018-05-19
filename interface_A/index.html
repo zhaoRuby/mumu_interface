@@ -446,12 +446,18 @@
 										$.alert({
 											title: '任務（一）完成',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "下一步": 
+												{ 
+													action: function() {
+														document.location.href="./mission1-2.html";
+													} 
+												}
+											}
 										});
 									}
 									else{
 										$.alert({
-											theme: 'my-theme',
+											theme: 'my-theme3',
 											title: '點選錯誤',
 											content: '請尋找魔法奇幻內容的分類',
 											buttons: { "繼續任務": { action: function() {} }}
@@ -465,12 +471,14 @@
 										$.alert({
 											title: '任務（一）完成',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "下一步": { action: function() {
+												document.location.href="./mission1-2.html";
+											} }}
 										});
 									}
 									else{
 										$.alert({
-											theme: 'my-theme',
+											theme: 'my-theme3',
 											title: '點選錯誤',
 											content: '請尋找魔法奇幻內容的分類',
 											buttons: { "繼續任務": { action: function() {}}}
@@ -484,12 +492,14 @@
 										$.alert({
 											title: '任務（一）完成',
 											content: '恭喜你完成任務!',
-											buttons: { "下一步": { action: function() {} }}
+											buttons: { "下一步": { action: function() {
+												document.location.href="./mission1-2.html";
+											} }}
 										});
 									}
 									else{
 										$.alert({
-											theme: 'my-theme',
+											theme: 'my-theme3',
 											title: '點選錯誤',
 											content: '請尋找魔法奇幻內容的分類並點選',
 											buttons: { "繼續任務": { action: function() {}}}
