@@ -80,10 +80,27 @@
 		});		
 		
 	
-		
 
 /*Main01 click event*/
 		$("#main01").click(function(){
+// record
+            $.ajax({
+                    type :"GET",
+                    url  : "../php/saveRecord.php",
+                    data : { 
+	                           mission_number : "M1",   
+	                           interface_number : "A",
+	                           click_object : "A"                         
+                        },
+                    dataType: "text",
+                    success : function(bookInfo) {
+                    	
+					}                                         
+            });
+
+
+
+
 
 			$(".z2").css({"opacity":"1"});
 			$("#bt_backMain").show();
@@ -136,6 +153,23 @@
 
 /*Main02 click event*/
 		$("#main02").click(function(){
+
+// record
+            $.ajax({
+                    type :"GET",
+                    url  : "../php/saveRecord.php",
+                    data : { 
+	                           mission_number : "M1",   
+	                           interface_number : "A",
+	                           click_object : "B"                         
+                        },
+                    dataType: "text",
+                    success : function(bookInfo) {
+                    	
+					}                                         
+            });
+
+
 			$(".z2").css({"opacity":"1"});
 			$("#bt_backMain").show();
 			// 其他大圓消失
@@ -191,6 +225,22 @@
 
 /*Main03 click event*/
 		$("#main03").click(function(){
+
+// record
+            $.ajax({
+                    type :"GET",
+                    url  : "../php/saveRecord.php",
+                    data : { 
+	                           mission_number : "M1",   
+	                           interface_number : "A",
+	                           click_object : "C"                         
+                        },
+                    dataType: "text",
+                    success : function(bookInfo) {
+                    	
+					}                                         
+            });
+
 			$(".z2").css({"opacity":"1"});
 			$("#bt_backMain").show();
 			// 其他大圓消失
@@ -240,6 +290,21 @@
 
 /*Main04 click event*/
 		$("#main04").click(function(){
+
+// record
+            $.ajax({
+                    type :"GET",
+                    url  : "../php/saveRecord.php",
+                    data : { 
+	                           mission_number : "M1",   
+	                           interface_number : "A",
+	                           click_object : "D"                         
+                        },
+                    dataType: "text",
+                    success : function(bookInfo) {
+                    	
+					}                                         
+            });
 			
 			$(".z2").css({"opacity":"1"});
 			$("#bt_backMain").show();
@@ -296,6 +361,22 @@
 
 /*div_backMain click*/
 		$("#bt_backMain").click(function(){
+
+// record
+            $.ajax({
+                    type :"GET",
+                    url  : "../php/saveRecord.php",
+                    data : { 
+	                           mission_number : "M1",   
+	                           interface_number : "A",
+	                           click_object : "BACK"                         
+                        },
+                    dataType: "text",
+                    success : function(bookInfo) {
+                    	
+					}                                         
+            });
+
 			$(".z2").css({"opacity":"0.5"});
 			$("#bt_backMain").hide();
 
@@ -457,7 +538,7 @@
 									}
 									else{
 										$.alert({
-											theme: 'my-theme3',
+											theme: 'my-theme',
 											title: '點選錯誤',
 											content: '請尋找魔法奇幻內容的分類',
 											buttons: { "繼續任務": { action: function() {} }}
@@ -478,7 +559,7 @@
 									}
 									else{
 										$.alert({
-											theme: 'my-theme3',
+											theme: 'my-theme',
 											title: '點選錯誤',
 											content: '請尋找魔法奇幻內容的分類',
 											buttons: { "繼續任務": { action: function() {}}}
@@ -499,7 +580,7 @@
 									}
 									else{
 										$.alert({
-											theme: 'my-theme3',
+											theme: 'my-theme',
 											title: '點選錯誤',
 											content: '請尋找魔法奇幻內容的分類並點選',
 											buttons: { "繼續任務": { action: function() {}}}
