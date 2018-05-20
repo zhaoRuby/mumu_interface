@@ -3,18 +3,21 @@
 
 	$subtopic = $_GET['subtopic'];
 	//$db_ip = "127.0.0.1";
-	$db_ip = "sql112.byethost.com";
+	//$db_ip = "sql112.byethost.com";
+	$db_ip = "sql308.byethost.com";
 	//$db_account="root";
-	$db_account = "b7_22100355";
+	//$db_account = "b7_22100355";
+	$db_account = "b8_22111099";
 	//$db_pwd="1234";
-	$db_pwd = "v9610779";
+	//$db_pwd = "v9610779";
+	$db_pwd = "ntut105";
 	$db_link = @mysql_connect($db_ip,$db_account,$db_pwd) or die ("cant connect db");
 
 	mysql_query("SET NAMES utf8");
 
 	//$selecDB = mysql_select_db("storybook") or die ("DB connection failed");
-	$selecDB = mysql_select_db("b7_22100355_bookstory") or die ("DB connection failed");
-
+	//$selecDB = mysql_select_db("b7_22100355_bookstory") or die ("DB connection failed");
+	$selecDB = mysql_select_db("b8_22111099_bookstory") or die ("DB connection failed");
 
 	/*SELECT*/
 	$sql = 'SELECT * FROM `book`  WHERE `'.$subtopic.'` = 1';

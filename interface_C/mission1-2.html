@@ -22,7 +22,7 @@
 <body>
 	<div class="bar">
 		<div id="logoBar">
-			<a href="./index.html"><img id="logo_home" src="../img/Interface_Logo.png"></a>
+			<img id="logo_home" src="../img/Interface_Logo.png">
 			<div id="bt_info" ><img id="logo" src="../img/Interface_MissionInfo.png"></div>
 		</div>
 	</div>
@@ -1952,6 +1952,168 @@
 				
 			
 		});
+
+$("#logo_home").click(function(){
+
+// record
+            $.ajax({
+                    type :"GET",
+                    url  : "../php/saveRecord.php",
+                    data : { 
+	                           mission_number : fileName+"M2",
+	                           interface_number : "C",
+	                           click_object : "BACKHOME"                         
+                        },
+                    dataType: "text",
+                    success : function(bookInfo) {
+                    	
+					}                                         
+            });
+
+			swiper.removeAllSlides(); //remove slides
+			// back to child main
+			$("bt_backChildMain").hide();
+
+			$("#container").show();
+			$("#div_backMain").show();		
+
+			$(".z2").css({"opacity":"0.5"});
+			$("#bt_backMain").hide();
+
+
+/*remove click event*/
+		for(var i=0;i<=4;i++){
+			for(var j=1;j<=6;j++){
+				if(i==1||i==2){
+					$("#c"+i+"-"+j).off("click");
+				}
+				else if(i==3){
+					$("#c"+i+"-"+j).off("click");
+				}
+				else{
+					$("#c"+i+"-"+j).off("click");				
+				}
+	
+			}
+		}
+
+			
+//還原主題位置
+			for(var i=1;i<=2;i++){
+				for(var j=1;j<=6;j++){
+					switch(j){
+						case 1:
+							$("#c"+i+"-"+j).animate({
+								"margin-top":"0px",
+								"margin-left":"25px",
+								"width":"100px"
+							});
+							break;
+						case 2:
+							$("#c"+i+"-"+j).animate({
+								"margin-top":"-45px",
+								"margin-left":"110px",
+								"width":"100px"
+							});	
+							break;
+						case 3:
+							$("#c"+i+"-"+j).animate({
+								"margin-top":"0px",
+								"margin-left":"200px",
+								"width":"100px"
+							});	
+							break;
+						case 4:
+							$("#c"+i+"-"+j).animate({
+								"margin-top":"100px",
+								"margin-left":"25px",
+								"width":"100px"
+							});	
+							break;
+						case 5:
+							$("#c"+i+"-"+j).animate({
+								"margin-top":"145px",
+								"margin-left":"110px",
+								"width":"100px"
+							});	
+							break;
+						case 6:
+							$("#c"+i+"-"+j).animate({
+								"margin-top":"100px",
+								"margin-left":"200px",
+								"width":"100px"
+							});	
+							break;
+					}
+							
+				}
+			}
+		
+	
+			$("#c3-1").animate({
+				"margin-top":"15px",
+				"margin-left":"20px",
+				"width":"100px"
+			});
+			$("#c3-2").animate({
+				"margin-top":"-45px",
+				"margin-left":"112px",
+				"width":"100px"
+			});
+			$("#c3-3").animate({
+				"margin-top":"15px",
+				"margin-left":"200px",
+				"width":"100px"
+			});
+			$("#c3-4").animate({
+				"margin-top":"125px",
+				"margin-left":"50px",
+				"width":"100px"
+			});
+			$("#c3-5").animate({
+				"margin-top":"125px",
+				"margin-left":"180px",
+				"width":"100px"
+			});
+
+			$("#c4-1").animate({
+				"margin-top":"-20px",
+				"margin-left":"35px",
+				"width":"100px"
+			});
+			$("#c4-2").animate({
+				"margin-top":"-20px",
+				"margin-left":"190px",
+				"width":"100px"
+			});
+			$("#c4-3").animate({
+				"margin-top":"125px",
+				"margin-left":"35px",
+				"width":"100px"
+			});
+			$("#c4-4").animate({
+				"margin-top":"125px",
+				"margin-left":"190px",
+				"width":"100px"
+			});
+
+			for(var i=1;i<=4;i++){
+
+				$("#main0"+i).animate({
+					"margin-top":"0px",
+					"margin-left":"60px",
+					"width":"200px"
+				});				
+			}
+
+			for (var i=1; i <= 4; i++) {
+				$("#main0"+i).show();
+			};
+			
+			for(var i=1;i<=4;i++){
+				$("#div_main"+i).css({"visibility":"visible"});
+			}
+});
 
 
 /*swiper*/
