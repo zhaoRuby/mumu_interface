@@ -2,12 +2,12 @@
 
 
 	$subtopic = $_GET['subtopic'];
-	//$db_ip = "127.0.0.1";
-	$db_ip = "sql112.byethost.com";
-	//$db_account="root";
-	$db_account = "b7_22100355";
-	//$db_pwd="1234";
-	$db_pwd = "v9610779";
+	$db_ip = "127.0.0.1";
+	//$db_ip = "sql112.byethost.com";
+	$db_account="root";
+	//$db_account = "b7_22100355";
+	$db_pwd="1234";
+	//$db_pwd = "v9610779";
 	$db_link = @mysql_connect($db_ip,$db_account,$db_pwd) or die ("cant connect db");
 
 	mysql_query("SET NAMES utf8");
