@@ -3,14 +3,14 @@
 
 	$subtopic = $_GET['subtopic'];
 
-	$db_ip = "127.0.0.1";
-	$db_account = "root";
-	$db_pwd = "1234";
+	$db_ip = "sql112.byethost.com";
+	$db_account = "b7_22100355";
+	$db_pwd = "v9610779";
 	$db_link = @mysql_connect($db_ip,$db_account,$db_pwd) or die ("cant connect db");
 
 	mysql_query("SET NAMES utf8");
 
-	$selecDB = mysql_select_db("storybook") or die ("DB connection failed");
+	$selecDB = mysql_select_db("b7_22100355_bookstory") or die ("DB connection failed");
 
 
 

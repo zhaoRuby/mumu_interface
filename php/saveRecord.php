@@ -14,7 +14,7 @@
 	date_default_timezone_set('Asia/Taipei'); 
 	$now = date("Y-m-d H:i:s");
 
-	$file="C:\interface_".$interface_number."_".$mission_number.".txt";
+	$file="../data/interface_".$interface_number."_".$mission_number.".txt";
 	$content = '"'.$now.'","'.$click_object.'"'.PHP_EOL;
 
 	if($f = file_put_contents($file, $content,FILE_APPEND)){

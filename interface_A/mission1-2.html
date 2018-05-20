@@ -3,7 +3,7 @@
 	<title>圓夢繪館實驗－100相切有動畫</title>
 	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" >
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 	<link rel="stylesheet" href="./css/style.css">
 
 <!--confirm-->
@@ -28,37 +28,37 @@
 	</div>
 	<div id="container" class="container">
 		<div id="div_main1" class="main1">
-				<img id="main01" class="z1" src="./img/Interface_Main01.png">
-				<img id="c1-1" class="z2" src="./img/Interface_02_200.png">
-				<img id="c1-2" class="z2" src="./img/Interface_03_200.png">
-				<img id="c1-3" class="z2" src="./img/Interface_04_200.png">
-				<img id="c1-4" class="z2" src="./img/Interface_05_200.png">
-				<img id="c1-5" class="z2" src="./img/Interface_06_200.png">
-				<img id="c1-6" class="z2" src="./img/Interface_07_200.png">
+				<img id="main01" alt="A" class="z1" src="./img/Interface_Main01.png">
+				<img id="c1-1" alt="A1" class="z2" src="./img/Interface_02_200.png">
+				<img id="c1-2" alt="A2" class="z2" src="./img/Interface_03_200.png">
+				<img id="c1-3" alt="A3" class="z2" src="./img/Interface_04_200.png">
+				<img id="c1-4" alt="A4" class="z2" src="./img/Interface_05_200.png">
+				<img id="c1-5" alt="A5" class="z2" src="./img/Interface_06_200.png">
+				<img id="c1-6" alt="A6" class="z2" src="./img/Interface_07_200.png">
 		</div>
 		<div id="div_main2" class="main2">
-				<img id="main02" class="z1" src="./img/Interface_Main02.png">
-				<img id="c2-1" class="z2" src="./img/Interface_09_200.png">
-				<img id="c2-2" class="z2" src="./img/Interface_10_200.png">
-				<img id="c2-3" class="z2" src="./img/Interface_11_200.png">
-				<img id="c2-4" class="z2" src="./img/Interface_12_200.png">
-				<img id="c2-5" class="z2" src="./img/Interface_13_200.png">
-				<img id="c2-6" class="z2" src="./img/Interface_14_200.png">
+				<img id="main02" alt="B" class="z1" src="./img/Interface_Main02.png">
+				<img id="c2-1" alt="B1" class="z2" src="./img/Interface_09_200.png">
+				<img id="c2-2" alt="B2" class="z2" src="./img/Interface_10_200.png">
+				<img id="c2-3" alt="B3" class="z2" src="./img/Interface_11_200.png">
+				<img id="c2-4" alt="B4" class="z2" src="./img/Interface_12_200.png">
+				<img id="c2-5" alt="B5" class="z2" src="./img/Interface_13_200.png">
+				<img id="c2-6" alt="B6" class="z2" src="./img/Interface_14_200.png">
 		</div>
 		<div id="div_main3" class="main3">
-			<img id="main03" class="z1" src="./img/Interface_Main03.png">
-			<img id="c3-1" class="z2" src="./img/Interface_16_200.png">
-			<img id="c3-2" class="z2" src="./img/Interface_17_200.png">
-			<img id="c3-3" class="z2" src="./img/Interface_18_200.png">
-			<img id="c3-4" class="z2" src="./img/Interface_19_200.png">
-			<img id="c3-5" class="z2" src="./img/Interface_20_200.png">
+			<img id="main03" alt="C" class="z1" src="./img/Interface_Main03.png">
+			<img id="c3-1" alt="C1" class="z2" src="./img/Interface_16_200.png">
+			<img id="c3-2" alt="C2" class="z2" src="./img/Interface_17_200.png">
+			<img id="c3-3" alt="C3" class="z2" src="./img/Interface_18_200.png">
+			<img id="c3-4" alt="C4" class="z2" src="./img/Interface_19_200.png">
+			<img id="c3-5" alt="C5" class="z2" src="./img/Interface_20_200.png">
 		</div>
 		<div id="div_main4" class="main4">
-			<img id="main04" class="z1" src="./img/Interface_Main04.png">
-			<img id="c4-1" class="z2" src="./img/Interface_22_200.png">
-			<img id="c4-2" class="z2" src="./img/Interface_23_200.png">
-			<img id="c4-3" class="z2" src="./img/Interface_24_200.png">
-			<img id="c4-4" class="z2" src="./img/Interface_25_200.png">
+			<img id="main04" alt="D" class="z1" src="./img/Interface_Main04.png">
+			<img id="c4-1" alt="D1" class="z2" src="./img/Interface_22_200.png">
+			<img id="c4-2" alt="D2" class="z2" src="./img/Interface_23_200.png">
+			<img id="c4-3" alt="D3" class="z2" src="./img/Interface_24_200.png">
+			<img id="c4-4" alt="D4" class="z2" src="./img/Interface_25_200.png">
 		</div>
 	</div>
 	<div id="div_backMain">
@@ -88,6 +88,18 @@
 
 	$(document).ready(function(){
 
+//set file name
+		var today=new Date();
+		var currentDateTime =
+		today.getFullYear()+'Y'+
+		(today.getMonth()+1)+'M'+
+		today.getDate()+'D-'+
+		today.getHours()+'-'+today.getMinutes()+'-'+today.getSeconds();
+		var x = Math.floor((Math.random() * 1000) + 1);
+
+		var fileName = currentDateTime+"-"+x;
+
+
 /*Initial*/
 		var answer="給阿公的一封信";
 
@@ -100,6 +112,45 @@
 			title: '任務（二）開始',
 			content: '請尋找 “給阿公的一封信”，本書分類為：角色身份、溫馨動人、親情關係、適合7~9歲的孩童閱讀。'
 		});		
+
+
+		$(".z1").click(function(){
+				var topic = $(this).attr("alt");
+				// record
+				            $.ajax({
+				                    type :"GET",
+				                    url  : "../php/saveRecord.php",
+				                    data : { 
+					                           mission_number : fileName+"M2",   
+					                           interface_number : "A",
+					                           click_object : topic                 
+				                        },
+				                    dataType: "text",
+				                    success : function(bookInfo) {
+				                    	
+									}                                         
+				            });
+
+				$(".z2").click(function(){
+						var subtopic = $(this).attr("alt");
+						// record
+			            $.ajax({
+			                    type :"GET",
+			                    url  : "../php/saveRecord.php",
+			                    data : { 
+				                           mission_number : fileName+"M2",   
+				                           interface_number : "A",
+				                           click_object : subtopic                 
+			                        },
+			                    dataType: "text",
+			                    success : function(bookInfo) {
+			                    	
+								}                                         
+			            });		
+				});
+
+
+		});
 		
 	
 		
@@ -155,21 +206,6 @@
 
 /*c1-1 click*/
 			$("#c1-1").on("click",function(){
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "A1"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
-
 
 	                $.ajax({
 	                        type :"GET",
@@ -186,7 +222,28 @@
 
 	                            swiper.update();
 	                            // alert(bookInfo);   
+
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
+							        ////////-----------------------
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -222,21 +279,6 @@
 /*c1-2 click*/
 			$("#c1-2").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "A2"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
-
 	                $.ajax({
 	                        type :"GET",
 	                        url  : "../php/db.php",
@@ -253,6 +295,25 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -288,21 +349,6 @@
 /*c1-3 click*/
 			$("#c1-3").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "A3"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
-
 	                $.ajax({
 	                        type :"GET",
 	                        url  : "../php/db.php",
@@ -319,6 +365,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -354,20 +418,7 @@
 /*c1-4 click*/
 			$("#c1-4").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "A4"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
+
 
 	                $.ajax({
 	                        type :"GET",
@@ -385,6 +436,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -420,21 +489,6 @@
 /*c1-5 click*/
 			$("#c1-5").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "A5"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
-
 
 	                $.ajax({
 	                        type :"GET",
@@ -452,6 +506,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -487,20 +559,7 @@
 /*c1-6 click*/
 			$("#c1-6").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "A6"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
+
 
 	                $.ajax({
 	                        type :"GET",
@@ -518,6 +577,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -557,20 +634,7 @@
 /*Main02 click event*/
 		$("#main02").click(function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "B"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
+
 
 			$(".z2").css({"opacity":"1"});
 			$("#bt_backMain").show();
@@ -625,20 +689,6 @@
 /*c2-1 click*/
 			$("#c2-1").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "B1"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -656,6 +706,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -692,20 +760,6 @@
 /*c2-2 click*/
 			$("#c2-2").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "B2"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 
 	                $.ajax({
@@ -724,6 +778,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -759,20 +831,6 @@
 /*c2-3 click*/
 			$("#c2-3").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "B3"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -790,6 +848,25 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -824,20 +901,6 @@
 			});		
 /*c2-4 click*/
 			$("#c2-4").on("click",function(){
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "B4"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -855,6 +918,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -891,20 +972,6 @@
 /*c2-5 click*/
 			$("#c2-5").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "B5"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -922,6 +989,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -959,20 +1044,6 @@
 /*c2-6 click*/
 			$("#c2-6").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "B6"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-           
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -990,6 +1061,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1028,20 +1117,6 @@
 /*Main03 click event*/
 		$("#main03").click(function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "C"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 			$(".z2").css({"opacity":"1"});
 			$("#bt_backMain").show();
@@ -1091,20 +1166,6 @@
 /*c3-1 click*/
 			$("#c3-1").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "C1"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -1122,6 +1183,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1158,20 +1237,7 @@
 /*c3-2 click*/
 			$("#c3-2").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "C2"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
+
 
 	                $.ajax({
 	                        type :"GET",
@@ -1189,6 +1255,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1224,21 +1308,6 @@
 /*c3-3 click*/
 			$("#c3-3").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "C3"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
-
 	                $.ajax({
 	                        type :"GET",
 	                        url  : "../php/db.php",
@@ -1255,6 +1324,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1291,20 +1378,6 @@
 /*c3-4 click*/
 			$("#c3-4").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "C4"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -1322,6 +1395,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1357,20 +1448,6 @@
 /*c3-5 click*/
 			$("#c3-5").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "C5"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -1388,6 +1465,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1427,20 +1522,7 @@
 /*Main04 click event*/
 		$("#main04").click(function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "D"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
+
 			
 			$(".z2").css({"opacity":"1"});
 			$("#bt_backMain").show();
@@ -1485,20 +1567,6 @@
 /*c4-1 click*/
 			$("#c4-1").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "D1"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
 
 	                $.ajax({
 	                        type :"GET",
@@ -1516,6 +1584,23 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1553,21 +1638,6 @@
 			$("#c4-2").on("click",function(){
 
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "D2"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
-
 	                $.ajax({
 	                        type :"GET",
 	                        url  : "../php/db.php",
@@ -1584,6 +1654,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1620,21 +1708,6 @@
 			$("#c4-3").on("click",function(){
 
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "D3"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
-
 	                $.ajax({
 	                        type :"GET",
 	                        url  : "../php/db.php",
@@ -1651,6 +1724,24 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1686,21 +1777,6 @@
 /*c4-4 click*/
 			$("#c4-4").on("click",function(){
 
-// record
-            $.ajax({
-                    type :"GET",
-                    url  : "../php/saveRecord.php",
-                    data : { 
-	                           mission_number : "M2",   
-	                           interface_number : "A",
-	                           click_object : "D4"                         
-                        },
-                    dataType: "text",
-                    success : function(bookInfo) {
-                    	
-					}                                         
-            });
-
 	                $.ajax({
 	                        type :"GET",
 	                        url  : "../php/db.php",
@@ -1717,6 +1793,23 @@
 	                            swiper.update();
 	                            // alert(bookInfo);   
 							    $(".sliderSize").click(function(){
+							    	var bookName = $(this).next().text();
+							    	//alert(bookName);
+
+							        $.ajax({
+							                type :"GET",
+							                url  : "../php/saveRecord.php",
+							                data : { 
+							                           mission_number : fileName+"M2",   
+							                           interface_number : "A",
+							                           click_object : bookName           
+							                    },
+							                dataType: "text",
+							                success : function(bookInfo) {
+							                	
+											}                                         
+							        });	
+							    	
 							    	if($(this).next().text()=="給阿公的一封信")
 							    	{
 										$.alert({
@@ -1771,7 +1864,7 @@
                     type :"GET",
                     url  : "../php/saveRecord.php",
                     data : { 
-	                           mission_number : "M2",   
+	                           mission_number : fileName+"M2",   
 	                           interface_number : "A",
 	                           click_object : "BACK"                         
                         },
@@ -1926,7 +2019,7 @@
                     type :"GET",
                     url  : "../php/saveRecord.php",
                     data : { 
-	                           mission_number : "M2",   
+	                           mission_number : fileName+"M2",
 	                           interface_number : "A",
 	                           click_object : "BACK_2"                         
                         },
@@ -1965,7 +2058,6 @@
 	        paginationClickable: true,
 	      },
 	    });
-
 
 
 	});
